@@ -101,6 +101,16 @@ learn hibernate
 
 4、SchemaExport生成表格
 
+
+## hibernate 逆向工程        
+1、在数据库中创建表              
+2、在eclipse中添加hibernate tool工具        
+3、生成hibernate.cfg.xml     
+4、配置hibernate conclose configuration      
+5、生成 hibernate.reveng.xml     
+6、在hibernate tool工具界面 运行 hibernate code generation configurations     
+
+
 ## 其他
 
 ### 使用log4j日志
