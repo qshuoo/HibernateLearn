@@ -7,6 +7,7 @@ import org.hibernate.cfg.Configuration;
 public class Client {
 	public static void main(String[] args) {
 		
+		/*
 		//读取hibernate.cfg.xml文件
 		Configuration cfg = new Configuration().configure();
 		//建立SessionFactory
@@ -21,6 +22,15 @@ public class Client {
 		//提交事务
 		session.getTransaction().commit();
 		//关闭Session
+		session.close();
+		*/
+		
+		Session session = MySessionFactory.getSessionFactory().openSession();
+		
+		session.beginTransaction();
+		User user = new User("dm", "大明", "456");
+		session.save(user);
+		session.getTransaction().commit();
 		session.close();
 		
 		

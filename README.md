@@ -67,5 +67,33 @@ learn hibernate
 	session.getTransaction().commit();
 	//关闭Session
 	session.close();
+    
+## 使用单例模式编写MySessionFactory    
+因为SessionFactory是重量级类，故一个数据库最好只对应一个SessionFactory，这就要采用单例模式了          
+
+1、编写MySessionFactory
+
+	public class MySessionFactory {
+		private static SessionFactory sessionFactory = null;
+		
+		private MySessionFactory() {
+		}
+		static {
+			sessionFactory = new Configuration().configure().buildSessionFactory();
+		}
+		public static SessionFactory getSessionFactory() {
+			return sessionFactory;
+		}   
+	}
+
+2、使用MySessionFactory     
+
+	Session session = MySessionFactory.getSessionFactory().openSession();
+
+
+
+	
+
+
 
          
