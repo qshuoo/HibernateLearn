@@ -46,6 +46,26 @@ learn hibernate
 	SchemaExport export = new SchemaExport();    
 	export.create(EnumSet.of(TargetType.DATABASE),metadataImplementor);      
 	
-`Hibernate5.2版本 SchemaExport 生成表的方法为上述过程 `
+`Hibernate5.2版本 SchemaExport 生成表的方法为上述过程 `    
+
+## 编写类 对表进行CURD操作
+
+以添加数据为例
+	
+	//读取hibernate.cfg.xml文件
+	Configuration cfg = new Configuration().configure();
+	//建立SessionFactory
+	SessionFactory sf = cfg.buildSessionFactory();
+	//取得Session
+	Session session = sf.openSession();
+	//开启事务
+	session.beginTransaction();
+	//操作数据
+	User user = new User("xm", "小明", "123");
+	session.save(user);
+	//提交事务
+	session.getTransaction().commit();
+	//关闭Session
+	session.close();
 
          
