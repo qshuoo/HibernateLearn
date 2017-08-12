@@ -12,7 +12,7 @@ learn hibernate
 4、设置密码    
 5、设置方言     
 `若Mysql版本为5.0以上 所配置方言为MySQL5Dialect`   
-<-安装hibernate插件可自动配置生成->    
+`<-安装hibernate插件可自动配置生成->`    
       
 ## 编写实体类
 无特别要求        
@@ -26,16 +26,17 @@ learn hibernate
         <column name="ID" />
         <generator class="assigned" />
    </id>   
-   
-   
+
 	 配置一般属性
-   <property name="username" type="java.lang.String">
-        <column name="USERNAME" />
-   </property>    
+	<property name="username" type="java.lang.String">
+		<column name="USERNAME" />
+	</property>    
    
   `配置主键递增  <generator class="increment" />`    
      
 2、在hibernate.cfg.xml中配置映射类      
 	
-	<mapping resource="com/hibernate/entity/User.hbm.xml"/>
+	<mapping resource="com/hibernate/entity/User.hbm.xml"/>    
+	
+`<-安装hibernate插件可自动配置生成->`   
          
