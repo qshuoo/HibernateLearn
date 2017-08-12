@@ -91,9 +91,19 @@ learn hibernate
 	Session session = MySessionFactory.getSessionFactory().openSession();
 
 
+## 使用注解映射实体类    
+1、确保相关jar包导入         
+2、编写实体类使用注解          
+`@Entity  @Id  @Column等`     
+3、在hibernate.cfg.xml中映射实体类
+	
+	<mapping class = "com.hibernate.entity.Manager"/>
+
+4、SchemaExport生成表格
+
 ## 其他
 
-###使用log4j日志
+### 使用log4j日志
 
 编写log4j.properties
 

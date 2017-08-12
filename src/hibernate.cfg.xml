@@ -17,6 +17,7 @@
 <!--         显示执行的sql语句,但会降低效率 -->
         <property name="hibernate.show_sql">true</property>
 <!--         映射实体类 -->
-        <mapping resource="com/hibernate/entity/User.hbm.xml"/>
+<!--         <mapping resource="com/hibernate/entity/User.hbm.xml"/> -->
+        <mapping class = "com.hibernate.entity.Manager"/>
     </session-factory>
 </hibernate-configuration>
