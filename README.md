@@ -25,14 +25,17 @@ learn hibernate
 	<id name="id" type="int">
         <column name="ID" />
         <generator class="assigned" />
-   </id>  
-  	配置一般属性
+   </id>   
+   
+   
+	 配置一般属性
    <property name="username" type="java.lang.String">
         <column name="USERNAME" />
-   </property>
-         配置主键递增  <generator class="increment" />
-
-2、在hibernate.cfg.xml中配置映射类     
+   </property>    
+   
+  `配置主键递增  <generator class="increment" />`    
+     
+2、在hibernate.cfg.xml中配置映射类      
 	
 	<mapping resource="com/hibernate/entity/User.hbm.xml"/>
          
