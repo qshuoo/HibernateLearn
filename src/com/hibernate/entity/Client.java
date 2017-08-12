@@ -28,7 +28,7 @@ public class Client {
 		Session session = MySessionFactory.getSessionFactory().openSession();
 		
 		session.beginTransaction();
-		User user = new User("dm", "´óÃ÷", "456");
+		User user = new User("xh", "Ð¡ºì", "123");
 		session.save(user);
 		session.getTransaction().commit();
 		session.close();

@@ -25,7 +25,7 @@ learn hibernate
 	<id name="id" type="int">
         <column name="ID" />
         <generator class="assigned" />
-   </id>   
+	</id>   
 
 	 配置一般属性
 	<property name="username" type="java.lang.String">
@@ -89,6 +89,25 @@ learn hibernate
 2、使用MySessionFactory     
 
 	Session session = MySessionFactory.getSessionFactory().openSession();
+
+
+## 其他
+
+###使用log4j日志
+
+编写log4j.properties
+
+	<span style="font-size:12px;">### direct log messages to stdout ###  
+	log4j.rootLogger=warn, stdout  
+	log4j.appender.stdout=org.apache.log4j.ConsoleAppender  
+	log4j.appender.stdout.Target=System.out  
+	log4j.appender.stdout.layout=org.apache.log4j.PatternLayout  
+	log4j.appender.stdout.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n  
+	</span>
+
+`log4j.properties放在src目录下`
+  
+
 
 
 
