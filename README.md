@@ -13,3 +13,7 @@ learn hibernate
 5、设置方言     
 `若Mysql版本为5.0以上 所配置方言为MySQL5Dialect`   
 <-安装hibernate插件可自动配置生成->    
+      
+## 编写实体类
+无特别要求        
+
