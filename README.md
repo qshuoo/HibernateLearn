@@ -39,4 +39,13 @@ learn hibernate
 	<mapping resource="com/hibernate/entity/User.hbm.xml"/>    
 	
 `<-安装hibernate插件可自动配置生成->`   
+    
+## 编写类生成表格
+	ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().configure().build();
+	MetadataImplementor metadataImplementor =(MetadataImplementor) new    	MetadataSources(serviceRegistry).buildMetadata();    
+	SchemaExport export = new SchemaExport();    
+	export.create(EnumSet.of(TargetType.DATABASE),metadataImplementor);      
+	
+`Hibernate5.2版本 SchemaExport 生成表的方法为上述过程 `
+
          
